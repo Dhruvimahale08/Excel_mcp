@@ -1,0 +1,6 @@
+mcp
+openai
+python-dotenv
+pandas
+openpyxl
+pyyaml

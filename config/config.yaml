@@ -1,0 +1,37 @@
+# Excel MCP Server Configuration
+
+# Excel file path
+excel_path: "data/employees_mcp.xlsx"
+
+# OpenAI configuration
+openai:
+  model: "gpt-4o-mini"
+  temperature: 0
+  max_retries: 3
+  retry_delay: 2  # seconds
+
+# Processing configuration
+processing:
+  batch_size: 10  # Process in batches
+  backup_before_update: true
+  backup_directory: "backups"
+
+# Logging configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "logs/mcp_server.log"
+  console: true
+
+# Decision rules
+rules:
+  designation:
+    intern_max_years: 2
+    junior_max_years: 4
+    senior_max_years: 7
+    lead_min_years: 8
+  
+  salary_band:
+    l1_max_years: 3
+    l2_max_years: 6
+    l3_min_years: 7
+
